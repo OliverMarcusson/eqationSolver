@@ -47,10 +47,11 @@ def solve_esys_2():
     
     return x, y
 
-def main():
-    print("Equation solver, by Oliver Marcusson\n")
-    sleep(1)
-    print("What equation do you want to solve?")
+def main(): # Main Loop
+    intro = open('intro.txt', 'r', 8192, 'utf-8')
+    print(intro.read())
+    sleep(2)
+    print("\nWhat equation do you want to solve?")
     print("1. 2nd Degree")
     print("2. Exponential")
     print("3. Equation System")
