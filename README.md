@@ -1,5 +1,11 @@
 # equationSolver
 A solver for different types of equations.
-1. 2nd Degree equations
-2. Exponential equations
-3. Equation systems with (at the moment) 2 unknowns.
+* 2nd Degree equations
+* Exponential equations
+* Equation systems with (at the moment) 2 unknowns.
+
+## TODO-List:
+- [ ] Make code able to detect equation systems with unlimited solutions.
+- [ ] Support more unknowns in equation system solver.
+- [ ] Support 3rd degree equations. 
+ 
