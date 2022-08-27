@@ -1,6 +1,5 @@
 import math
 from time import sleep
-import os
 
 def solve_esys_2():
     print("Please input your values.")
@@ -31,7 +30,7 @@ def solve_esys_2():
             nX = nX * -1
             c = c * -1
         
-        x = f"{c}/{nX}"
+        x = str(c) + "/" + str(nX)
     else:
         x = c / nX
     
@@ -41,15 +40,16 @@ def solve_esys_2():
             o_x = o_x * -1
             o_c1 = o_c1 * -1
         
-        y = f"{(o_x + o_c1)}/{o_nY1}"
+        y = str((o_x + o_c1)) + "/" + str(o_nY1)
     else:
         y = (o_x + o_c1) / o_nY1
     
     return x, y
 
-def main(): # Main Loop
-    intro = open('intro.txt', 'r', 8192, 'utf-8')
-    print(intro.read())
+def solver(): # Main Loop
+    intro = """𝐸 𝓆 𝓊 𝒶 𝓉 𝒾 𝑜 𝓃   𝒮 𝑜 𝓁 𝓋 𝑒 𝓇
+by Oliver Marcusson"""
+    print(intro)
     sleep(2)
     print("\nWhat equation do you want to solve?")
     print("1. 2nd Degree")
@@ -130,14 +130,13 @@ def main(): # Main Loop
     # Equation System
     elif ans == "3":
         print("This function solves an equation system with two unknowns.")
-        print("The structure in use is: nX + nY = c\n")
+        print("The structure in use is: \nnX + nY = c\n")
         sleep(1)
         solution = solve_esys_2()
-        print(f"\nx = {solution[0]}\ny = {solution[1]}")
+        print("\nx = " + str(solution[0]) + "\ny = " + str(solution[1]))
 
     else:  # If no valid option is chosen
         print("Please input a valid number.")
 
 # Main Program
-if __name__ == '__main__':
-    main()
+solver()
